@@ -14,6 +14,7 @@ fi
 
 docker run \
     --name ipsec-vpn-server \
+    --net=host \
     -p 500:500/udp \
     -p 4500:4500/udp \
     -v /lib/modules:/lib/modules:ro \
@@ -24,4 +25,4 @@ docker run \
     -v /lib/modules:/lib/modules:ro \
     -d --privileged \
     --restart=always \
-    mobilejazz/docker-ipsec-vpn-server
+    harveyphoenix/docker-ipsec-vpn-server-multi-user:testing
