@@ -17,6 +17,8 @@ RUN sed -i "s/httpredir\.debian\.org/ftp.us.debian.org/g" /etc/apt/sources.list 
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
          libcurl4-nss-dev libsystemd-dev flex bison gcc make \
          libunbound-dev xmlto \
+         tcpdump \
+         vim \
     && wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://download.libreswan.org/libreswan-${SWAN_VER}.tar.gz" \
     || wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://github.com/libreswan/libreswan/archive/v${SWAN_VER}.tar.gz" \
     && tar xzf "libreswan.tar.gz" \
