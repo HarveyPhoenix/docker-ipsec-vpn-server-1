@@ -105,6 +105,10 @@ conn xauth-psk
   ikev2=never
   cisco-unity=yes
   also=shared
+  mark=5/0xffffffff
+  vti-interface=vti02
+  vti-routing=yes
+  vti-shared=yes
 EOF
 
 # Specify IPsec PSK
